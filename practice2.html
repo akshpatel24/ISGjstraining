@@ -1,0 +1,33 @@
+
+
+
+
+
+//understand scope
+<html>
+    <head>
+<h2>JavaScript let</h2>
+    </head>
+    <body>
+        <p id="demo"></p>
+
+    <script>
+        let x=2;
+        {
+          let x=3;
+        }
+
+        {
+        let x=4
+        // document.write("Hello")
+        }
+    
+        {
+       let y=document.getElementById("demo")
+        y.innerHTML=x
+        }
+    
+
+    </script>
+    </body>
+</html>

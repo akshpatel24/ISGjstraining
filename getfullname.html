@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>practice1</title>
+<style>
+
+</style>
+
+</head>
+
+<body>
+<label>firstname</label>
+<input type="text" id="firs"  value=""  >
+<br>
+
+<label>middlename: </label>
+<input type="text" id="mid" value="" >
+
+<br>
+<label>lastname: </label>
+<input type="text" id="last" value="" >
+
+
+<br>
+<input type="button" id="full" value="fullname" onclick="function1()">
+<input type="button" id="clear" value="clearall" onclick="function2()">
+<br>
+
+
+
+
+<label>Fullname</label>
+
+<input type="text" id="print">
+
+
+<script>
+
+function function1()
+{
+let firstname=document.getElementById("firs")
+let middlename=document.getElementById("mid")
+let lastname=document.getElementById("last")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+
+let z=document.getElementById("print")
+
+z.value=firstname.value+"-"+middlename.value+" - "+lastname.value
+
+
+}
+
+
+function function2()
+{
+
+    let firstname=document.getElementById("firs")
+let middlename=document.getElementById("mid")
+let lastname=document.getElementById("last")
+    let z=document.getElementById("print") 
+    firstname.value=""
+    middlename.value=""
+    lastname.value=""
+    z.value=""
+
+}
+   
+
+
+</script>
+
+
+</body>
+</html>
