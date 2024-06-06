@@ -1,0 +1,54 @@
+
+//so basically in this function what i did was create differnt labels to execute.
+<!-- label was to declare radius circumfrance,area. input for the textbooks. had to use
+doucmentid because had to have a function that can also corrsponde use towars antoher p tag. -->
+
+
+
+
+<!DOCTYPE html>
+<body>
+    <label>Radius:</label>
+    <input type="text" id="radiu" value="">
+    <br>
+    <input
+        type="button"
+        id="calculatearea"
+        value="calculateareacircumfrance"
+        onclick="area1()"
+    >
+    <input
+        type="button"
+        id="clearing"
+        value="clear"
+        onclick="cleardata()"
+    >
+    <br>
+    <label> Area:</label>
+    <input type="text" id="area">
+    <br>
+    <label> Circumfrance:</label>
+    <input type="text" id="circum">
+    <br>
+    <script>
+ function area1()
+ {
+        let radius=document.getElementById("radiu")
+        let circumfrance=document.getElementById("circum")
+        let calarea=document.getElementById("area")
+        calarea.value=radius.value* radius.value*3.14;
+        circumfrance.value=2*3.14*radius.value
+ }
+ function cleardata()
+ {
+    let radius=document.getElementById("radiu")
+    radius.value=""
+    let circumfrance=document.getElementById("circum")
+    circumfrance.value=""
+    let calarea=document.getElementById("area")
+    calarea.value=""
+
+ }
+    </script>
+</body>
+</html>
