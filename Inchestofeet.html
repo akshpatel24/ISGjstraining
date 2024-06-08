@@ -1,0 +1,40 @@
+<!-- straight conversion of inches feet involved using math funcitons such as floor that is floor division. -->
+
+<!DOCTYPE html>
+
+<head>
+    <html>
+    <title>THis is good</title>
+
+<body></body>
+<label>Total inches</label>
+<input type="text" id="inchyi" value="">
+<br>
+<input type="button" id="convert" value="convertfrominchfeet" onclick="change()">
+<br>
+
+<label>Feet</label>
+<input type="text" id="feeet" value="">
+
+<label>inches</label>
+<input type="text" id="inch" value="">
+
+
+<script>
+
+    function change() {
+        try {
+            let totalinches = document.getElementById("inchyi")
+            let feet = document.getElementById("feeet")
+            let remainder = document.getElementById("inch")
+            feet.value = Math.floor(totalinches.value / 12)
+            remainder.value = totalinches.value % 12;
+        } catch (error) {
+            alert("Error : " + error);
+        }
+
+    }
+</script>
+
+</html>
+</head>

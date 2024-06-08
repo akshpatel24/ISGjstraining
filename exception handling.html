@@ -1,0 +1,91 @@
+<!-- this program was about understanding the ideas behind how try catch can be beneficial . for example using a
+ number to create a variable to understand the value of varibales and also how we need a number element
+ so we can create a basic form where if number greater then good otherwize print not ok in range.
+ The importance of try catch is that if there is syntax error in try it will point that while still progressing with the code.
+  <!status is not manadtory but will show sucess if does not have to go through catch or failure which the syntax error
+  .   -->
+<!DOCTYPE html>
+
+<head>
+    <title>Y</title>
+</head>
+
+<body>
+    <label>Enter 1 to 10.</label>
+    <input type="number" id="fillin" value="">
+
+
+    <input type="button" id=clearing value="press" onclick="kart1()">
+    <p id="response"></p> <br/>
+    <p id="checkstatus"></p>
+    <script>
+        function kart1() {
+            let num1 = document.getElementById("fillin")
+            let rep = document.getElementById("response")
+            let tryStatus=document.getElementById("checkstatus");
+
+            try {
+                if (num.value >= 0 && num.value <= 10) 
+                {
+                    rep.innerHTML = "This is ok. " + num.value
+                }
+                else 
+                {
+                    rep.innerHTML = "This is not ok in the raange " + num.value
+                }
+            }
+            catch (error) {
+
+            
+                rep.innerHTML = error
+                tryStatus.innerHTML="failure"
+                
+            }
+        
+
+            tryStatus.innerHTML="sucess"            
+            
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // try
+        // {
+        //     if(num.value>=0 && num.value<=15)
+        //     {
+        //         rep.innerHTML="This is a ok amount."+num.value;
+        //     } else {
+        //         rep.innerHTML="This is a not ok amount."+num.value;
+        //     }
+        // // }
+        // // catch(error){
+        // //     tryStatus = "Fail";
+        // //     rep.innerHTML=error;
+        // // }
+
+        // rep1.innerHTML="Try is " + tryStatus;
+
+        // }
+    </script>
+</body>
+
+</html>
