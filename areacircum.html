@@ -1,5 +1,5 @@
 
-//so basically in this function what i did was create differnt labels to execute.
+<!-- //so basically in this function what i did was create differnt labels to execute. -->
 <!-- label was to declare radius circumfrance,area. input for the textbooks. had to use
 doucmentid because had to have a function that can also corrsponde use towars antoher p tag. -->
 
@@ -36,10 +36,10 @@ doucmentid because had to have a function that can also corrsponde use towars an
         let radius=document.getElementById("radiu")
         let circumfrance=document.getElementById("circum")
         let calarea=document.getElementById("area")
-        calarea.value=radius.value* radius.value*3.14;
-        circumfrance.value=2*3.14*radius.value
+        calarea.value=radius.value* radius.value*Math.PI;
+        circumfrance.value=2*Math.PI*radius.value
  }
- function cleardata()
+ function cleardata() 
  {
     let radius=document.getElementById("radiu")
     radius.value=""
