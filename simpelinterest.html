@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Simple interest</h1>
+    <div id="calculator">
+        <table></table>
+
+        <br>
+        <label> Principal</label>
+        <input type="text" id="principal" value="">
+        <label> Rate of interest</label>
+        <input type="text" id="rate">
+        <label> Year</label>
+        <input type="text" id="year" value="">
+        <hr>
+        <input type="button" id="interestfind" value="calculateintest" onclick="calculateinterest1()">
+        <input type="button" id="clearing" value="clear" onclick="cleardata()">
+        <br>
+        <hr>
+
+        <label> simple interest :</label>
+        <input type="number" id="simplinterest">
+        <br>
+        <label> totalamount:</label>
+        <input type="number" id="totalamount">
+        <br>
+
+
+
+
+        <script>
+
+            function calculateinterest1() {
+                let Principal = document.getElementById("principal");
+                let Rateofitnerest = document.getElementById("rate");
+                let year = document.getElementById("year");
+                let simpleinterst = document.getElementById("simplinterest");
+                let totalamount = document.getElementById("totalamount");
+                simpleinterst.value = (Number(Principal.value) * Number(Rateofitnerest.value / 100)) * Number(year.value);
+                totalamount.value = (Number(Principal.value) + Number(simpleinterst.value))
+            }
+
+        </script>
+
+</body>
+
+</html>
