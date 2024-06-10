@@ -1,0 +1,115 @@
+<!-- onchange	An HTML element has been changed.
+
+onclick	The user clicks an HTML element. for example function will be called when the user changes the value of 
+the input field and 
+then clicks outside of the input field, causing it to lose focus.
+
+
+onmouseover	The user moves the mouse over an HTML element
+
+
+onmouseout	The user moves the mouse away from an HTML element
+
+onkeydown	The user pushes a keyboard key. button executes function
+
+onload	The browser has finished loading the page -->
+
+
+
+
+<!-- common are oncick and onkey -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,
+        td {
+            border: 1px dotted black;
+            /* padding: 8px; */
+        }
+          
+    
+    </style>
+</head>
+
+<body>
+    <label>Test</label>
+    <input type="text" id="class" value="">
+ 
+
+    <label>Test Marks</label>
+    <input type="number" id="roll" value="" onkeydown="handleKeyDown(event)">
+    <table>
+        <tr> 
+            <th>Normal Subjects Taken</th>
+            <th>Other Subjects Included</th>
+        </tr>
+        <tr>
+            <td>Free Elective</td>
+            <td>English</td>
+            
+        </tr>
+
+        <tr>
+            <td id="innerdata1">  </td>
+            <td id="innerdata2">  </td>
+
+        </tr>
+
+
+
+    </table>
+
+    <p id="rock"></p>
+    <script>
+// he event object in JavaScript contains information about the event that occurred, 
+// including details like the key that was pressed (event.key). 
+            function handleKeyDown(event) 
+            {
+            if (event.key == 'Enter') {
+                onkeydown();
+            
+            }
+        }
+            function onkeydown()
+        {
+            let staement = document.getElementById("rock")
+            try {
+                let subject = document.getElementById("class");
+                let grade = document.getElementById("roll");
+                let exam = document.getElementById("innerdata1")
+                let examresults = document.getElementById("innerdata2")
+
+                exam.innerHTML = subject.value
+
+                examresults.innerHTML = grade.value
+                }
+
+            catch (error) {
+                staement.innerHTML = "Not good"
+
+                }
+            }
+        
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
