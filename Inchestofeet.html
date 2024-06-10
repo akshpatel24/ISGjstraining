@@ -18,11 +18,12 @@
 
 <label>inches</label>
 <input type="text" id="inch" value="">
-
+<p id="confirm"></p>
 
 <script>
 
     function change() {
+        let pstatement=document.getElementById("incer")
         try {
             let totalinches = document.getElementById("inchyi")
             let feet = document.getElementById("feeet")
@@ -30,7 +31,9 @@
             feet.value = Math.floor(totalinches.value / 12)
             remainder.value = totalinches.value % 12;
         } catch (error) {
+
             alert("Error : " + error);
+            pstatement.value=error
         }
 
     }

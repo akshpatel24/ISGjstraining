@@ -1,0 +1,85 @@
+<!-- client side  -->
+<!-- he provided HTML code includes form elements for email, name, and phone number. The script checks if the name, email, and phone fields are filled and validates their formats. It uses regular expressions to ensure that the name starts with a letter, the email follows a standard pattern, and the phone number contains only digits and is 10 digits long. If any of the validations fail, the script displays an alert message indicating the specific validation error. This approach helps improve user experience by prompting for correct input formats before form submission. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>form validation</h1>
+    <label>email</label>
+    <input type="email" id="email" value="" required>
+    <br>
+    <label>name</label>
+    <input type="text" id="name" value="">
+    <br>
+    <label>phone</label>
+    <input type="number" id="phone" value="">
+    <br>
+    <input type="button" id="validation" value="buton" onclick="change()">
+
+    <script>
+        function change() {
+            let email = document.getElementById("email")
+            let name = document.getElementById("name")
+            let phone = document.getElementById("phone")
+            let fullNameRegEx = /^[a-zA-Z]/;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+             var phonePattern = /^\d+$/
+            try 
+            {
+
+                if (name.value == "") {
+                    alert("Name has to be filled.")
+                } else if(!fullNameRegEx.test(name.value)) {
+                    alert("Please enter valid name.")
+                }
+
+                if (email.value == "") {
+                    alert("Email has to be filled.")
+                }
+                else if(!emailPattern.test(email.value))
+                {
+                    alert("Email has to be valid.")
+                           
+                }
+
+                if (phone.value === "") {
+                alert("Phone number must be filled.");
+
+            } else if (!phonePattern.test(phone.value) && phone.value.length<=10) {
+                alert("Phone must be a 10-digit number.");
+            } 
+            } 
+            catch (error) 
+            {
+
+                alert(error);
+            }
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
