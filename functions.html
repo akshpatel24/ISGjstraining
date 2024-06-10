@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,24 +7,22 @@
 </head>
 <body>
     
-<p id="carinfo"></p>
-<p id="carinfo2"></p>
-
+<p id="carinfo2">   </p>
+<p id="staty">     </p>
 <script>
-function mygoal()
-{
-let a=document.getElementById("carinfo2")
-a.innerHTML="lexus"
+function mygoal(var_d) {
+    let a = document.getElementById("carinfo2");
+    a.innerHTML = "lexus";
 
+    let b = document.getElementById("staty");
+    b.innerHTML = "toyota"
+
+    console.log("The value of var_d is: " + var_d);
 }
 
-mygoal()
-
-
+let var_d = 4; 
+mygoal(var_d); 
 </script>
-
-
-
 
 </body>
 </html>
