@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>number </label>
+    <input type="text" id="number2" value=""></label>
+    <br>
+
+    <input type="button" id="convert" value="number" onclick="change()">
+<p id="check"></p>
+<script>
+    function change()
+    {
+        let a=document.getElementById("number2");
+        if(a.value%2==0)
+        {
+          document.getElementById("check").innerHTML="even"
+
+        }
+        else{
+          document.getElementById("check").innerHTML="odd"
+
+        }
+
+    }
+
+
+</script>
+
+    
+</body>
+</html>
