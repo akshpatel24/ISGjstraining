@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label>First Name:</label>
+    <input type="text" id="firstName" value="">
+    <label>Second Name:</label>
+    <input type="text" id="secondName" value="">
+    <label>thirdName:</label>
+    <input type="text" id="thirdName" value="">
+    <hr>
+    <input type="button" value="Submit" onclick="addProperties(person)">
+    <br>
+    <p id="fillinjason"></p>
+    <script>
+
+
+
+
+
+
+// function addProperties(person)
+// {
+//     const person={}
+//     person.name=document.getElementById("firstname").value
+
+// }
+
+
+        const person = {};
+        function addProperties(person) {
+
+            Person.firstName2=document.getElementById(firstName).value
+
+
+
+
+
+
+
+
+
+
+
+
+            person.firstName = document.getElementById("firstName").value;
+            person.secondName = document.getElementById("secondName").value;
+            person.thirdName = document.getElementById("thirdName").value;
+            let a=document.getElementById("fillinjason");
+            a.innerHTML=person.firstName+": "+person.secondName+ ":"+ person.thirdName;
+        }
+    </script
+</body>
+
+</html>\
+
+
+
+
