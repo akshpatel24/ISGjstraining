@@ -1,5 +1,5 @@
 <html lang="en">
-
+<!-- Query -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,19 +30,34 @@
     <label>4</label>
     <br>
 
-    <input type="button" id="submit" value="displayselect">
-<br>
+    <input type="button" id="submit" value="displayselect" onclick="practice()">
+    <br>
     <label>selected :</label>
     <input type="text" id="merge" value="">
-
-
-
-
-
-
     <br>
     <script>
-            
+
+
+        function practice()
+        {
+
+                    let gender=document.querySelector("input[name='gender']:checked")
+            let semester=document.querySelector("input[name='semester']:checked")
+            let select = document.getElementById("merge")
+            select.value = gender.value + "Semester"+ semester.value
+
+
+
+
+
+
+
+
+        }
+
+        </script>
+
+
 
     </script>
 
