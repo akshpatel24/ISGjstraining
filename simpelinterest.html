@@ -30,10 +30,6 @@
         <label> totalamount:</label>
         <input type="number" id="totalamount">
         <br>
-
-
-
-
         <script>
 
             function calculateinterest1() {
@@ -45,6 +41,22 @@
                 simpleinterst.value = (Number(Principal.value) * Number(Rateofitnerest.value / 100)) * Number(year.value);
                 totalamount.value = (Number(Principal.value) + Number(simpleinterst.value))
             }
+            function cleardata() 
+ {
+                let Principal = document.getElementById("principal");
+                Principal.value=""
+                let Rateofitnerest = document.getElementById("rate");
+                Rateofitnerest.value=""
+                let year = document.getElementById("year");
+                year.value=""
+                let simpleinterst = document.getElementById("simplinterest");
+                simpleinterst.value=""
+                let totalamount = document.getElementById("totalamount");
+            totalamount.value=""
+            }
+
+
+
 
         </script>
 
