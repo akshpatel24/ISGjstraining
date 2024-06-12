@@ -41,21 +41,18 @@
                 simpleinterst.value = (Number(Principal.value) * Number(Rateofitnerest.value / 100)) * Number(year.value);
                 totalamount.value = (Number(Principal.value) + Number(simpleinterst.value))
             }
-            function cleardata() 
- {
+            function cleardata() {
                 let Principal = document.getElementById("principal");
-                Principal.value=""
+                Principal.value = ""
                 let Rateofitnerest = document.getElementById("rate");
-                Rateofitnerest.value=""
+                Rateofitnerest.value = ""
                 let year = document.getElementById("year");
-                year.value=""
+                year.value = ""
                 let simpleinterst = document.getElementById("simplinterest");
-                simpleinterst.value=""
+                simpleinterst.value = ""
                 let totalamount = document.getElementById("totalamount");
-            totalamount.value=""
+                totalamount.value = ""
             }
-
-
 
 
         </script>
