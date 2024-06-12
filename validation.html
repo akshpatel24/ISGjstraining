@@ -12,7 +12,7 @@
 <body>
     <h1>form validation</h1>
     <label>email</label>
-    <input type="email" id="email" value="" required>
+    <input type="email" id="txtEmail" value="" required>
     <br>
     <label>name</label>
     <input type="text" id="name" value="">
@@ -24,50 +24,41 @@
 
     <script>
         function change() {
-            let email = document.getElementById("email")
             let name = document.getElementById("name")
             let phone = document.getElementById("phone")
+            let txtEmail = document.getElementById("txtEmail")
             let fullNameRegEx = /^[a-zA-Z]/;
             var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-             var phonePattern = /^\d+$/
-            try 
-            {
+            var phonePattern = /^\d+$/
+            try {
 
                 if (name.value == "") {
                     alert("Name has to be filled.")
-                } else if(!fullNameRegEx.test(name.value)) {
+                } else if (!fullNameRegEx.test(name.value)) {
                     alert("Please enter valid name.")
                 }
-            }
-            catch
-            {
-
-
-                
-            }
-                if (email.value == "") {
+                if (txtEmail.value == "") {
                     alert("Email has to be filled.")
                 }
-                else if(!emailPattern.test(email.value))
-                {
+                else if (!emailPattern.test(txtEmail.value)) {
                     alert("Email has to be valid.")
-                           
+
                 }
 
                 if (phone.value === "") {
-                alert("Phone number must be filled.");
+                    alert("Phone number must be filled.");
 
-            } else if (!phonePattern.test(phone.value) && phone.value.length<=10) {
-                alert("Phone must be a 10-digit number.");
-            } 
-            } 
-            catch (error) 
-            {
-
-                alert(error);
+                } else if (!phonePattern.test(phone.value) && phone.value.length <= 10) {
+                    alert("Phone must be a 10-digit number.");
+                }
             }
-        }
+            catch (error) {
+                    alert(error);
+            }
 
+
+
+        }
     </script>
 
 

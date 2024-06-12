@@ -1,0 +1,46 @@
+<!-- client side  -->
+<!-- he provided HTML code includes form elements for email, name, and phone number. The script checks if the name, email, and phone fields are filled and validates their formats. It uses regular expressions to ensure that the name starts with a letter, the email follows a standard pattern, and the phone number contains only digits and is 10 digits long. If any of the validations fail, the script displays an alert message indicating the specific validation error. This approach helps improve user experience by prompting for correct input formats before form submission. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./validation.js"></script>
+</head>
+
+<body>
+    <h1>form validation</h1>
+    
+
+    <!-- <label>Num 1</label>
+    <input type="text" id="txtNum1" value="">
+    <br>
+    <label>Num 2</label>
+    <input type="text" id="txtNum2" value="">
+    <br> -->
+
+    <label>name</label>
+    <input type="text" id="txtName" value="" onkeyup="onTextChage('txtName')">
+    <br>
+    <label>email</label>
+    <input type="email" id="txtEmail" value="" onkeyup="onTextChage('txtEmail')">
+    <br>
+    <label>phone</label>
+    <input type="number" id="txtPhoneNumber" onkeyup="onTextChage('txtPhoneNumber')" value="">
+    <br>
+    <label>Gender</label>
+    <select id="ddlGender" onchange="onGenderChange()">
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+        <option value="3">Other</option>
+    </select>
+    <br>
+    <input type="button" id="validation" value="Validate" onclick="onValidationClick()">
+
+    <br><br>
+    <p id="messageBox"></p>
+</body>
+
+</html>
