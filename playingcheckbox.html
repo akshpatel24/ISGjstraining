@@ -27,9 +27,10 @@
 <script>
 function print()
     {
-        
         let likejoin=document.querySelector("input[name='preference']:checked");
+
         let selectedchoice=document.getElementById("select")
+        
         selectedchoice.value = likejoin ? likejoin.value + " Select" : "Not checked";
 
     }
