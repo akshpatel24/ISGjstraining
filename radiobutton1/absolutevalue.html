@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<label> Enter value  </label>
+
+<input type="number" id="number" value="">
+
+<br>
+<label> Absolute value  </label>
+<input type="number" id="abs" value="">
+
+<br>
+<input type="button" id="submit" value="Result"  onclick="absolutefunction()">
+
+<p id="absolute"></p>
+</body>
+
+
+<script>
+function absolutefunction()
+{
+   let number=document.getElementById("number")
+   let abs=document.getElementById("abs")
+   let trystatus="sucess"
+    let message=document.getElementById("absolute")
+   try
+   {
+   if(number.value>=0)
+    {
+    abs.value=number.value
+
+    }
+    
+   else if(number.value<=0)
+        {
+            abs.value=-(number.value)
+
+
+        }
+    }
+    catch(error)
+    {
+       message.innerHTML="THis is not excepteable tryagain"
+
+    }
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</html>
