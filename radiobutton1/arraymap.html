@@ -1,0 +1,26 @@
+<!-- map() creates a new array from calling a function for every array element. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<p id="arraymap"></p>
+</head>
+<body>
+    <script>
+        const number = [3, 4, 5, 10];
+        const number2 = number.map(myFunction);
+      
+        function myFunction(number) {
+          return number * 10;
+        }
+      
+        // Display the result in the HTML element with id="newarray"
+        document.getElementById("arraymap").innerHTML = number2;
+      </script>
+
+
+
+</body>
+</html>
