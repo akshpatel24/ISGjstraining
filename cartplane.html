@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <label>x</label>
+        <input type="number" id="numberx"    value="">
+        <br>
+        <label>y</label>
+        <input type="number" id="numbery" value="">
+        <br>
+        <input type="button" value="Display quadrant" onclick="resulting()">
+        <br>
+        <label>result</label>
+        <input type="text" id="end" value="">
+        <script>
+        const cord={}
+        
+        function resulting()
+        {
+        let xpoint=document.getElementById("numberx")
+        let ypoint=document.getElementById("numbery")
+        let result=document.getElementById("end")
+        cord.x=xpoint.value
+        cord.y=ypoint.value
+            if(cord.x>0 &&cord.y>0)
+            {
+                result.value="quadrant1"
+
+            }
+
+            if(cord.x<0 &&cord.y>0)
+            {
+                result.value="quadrant2"
+
+            }
+
+            if(cord.x<0 &&cord.y<0)
+            {
+                result.value="quadrant3"
+
+            }
+            if(cord.x>0 &&cord.y<0)
+            {
+                result.value="quadrant4"
+
+            
+            }
+    
+    }
+
+
+
+        </script>
+
+
+
+
+
+</body>
+</html>
