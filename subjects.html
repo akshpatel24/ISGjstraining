@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Math</label>
+    <input type="number" id="numbermath"    value="">
+    <br>
+    <label>Science</label>
+    <input type="number" id="numberscience" value="">
+    <br>
+    <input type="button" value="Display Result" onclick="resulting()">
+
+    <br>
+    <label>result</label>
+    <input type="text" id="end" value="">
+
+
+    <script>
+    function resulting()
+    {
+        let math=document.getElementById("numbermath")
+        let science=document.getElementById("numberscience")
+        let result=document.getElementById("end")
+        if(math.value>=35 &&math.value<=100 && science.value>=35 && science.value<=100)
+        {
+                result.value="Pass"
+
+        }
+        else if(math.value>=0 && math.value<35 && science.value>=0 && science.value<35)
+                {
+                    result.value="Not pass"
+
+                }
+    }
+
+</script>
+
+
+
+
+</body>
+</html>
