@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .result {
+        background-color: blue;
+        border: 5px solid black; /* Corrected the border property */
+        color: white; /* To ensure the text is visible against the blue background */
+        padding: 10px; /* Adding some padding for better visibility */
+        margin-top: 20px; /* Add some margin at the top */
+    }
+</style>
+
+
+
+</head>
+<body>
+    <div id="result">
+        <label>Enter the number:</label>
+        <input type="number" id="numberInput">
+        <br>
+        <!-- <input type="button" id="generate" value="Loopdemo" onclick="generateNumbers()"> -->
+    </div>
+    <script>
+ function generateNumbers()
+    {
+
+    let number=document.getElementById("numberInput")
+    let divcall=document.getElementById("result")
+    let a=prompt("Enter the max iterations")
+    let product;
+    for(let i=0;i<a;i++)
+    {
+        product=number.value*i 
+        divcall.innerHTML += "<br>Product is " + number.value + " * " + i + " = " + product + "<br>";
+
+
+    }
+
+
+
+}
+</script>
+<input type="button" id="generate" value="Loopdemo" onclick="generateNumbers()">
+
+
+</body>
+</html>
