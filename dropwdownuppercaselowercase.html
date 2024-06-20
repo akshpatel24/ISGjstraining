@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- learned new tag of select. option tag will sepcify in the drop-down what optios we want. -->
+    <label>Enter name</label>
+    <input type="text"  id="main" value="">
+    <br>
+    
+
+
+
+
+    <select>
+        <option value="uppercase" id="01" name="optionpick">Uppercase</option>
+        <option value="lowercase" id="02" name= "optionpick">Lowercase</option>
+    </select>
+    <br>
+    <input type="button"  value="Display Result" onclick="handleClick()">
+<script>
+function handleClick()
+{
+let name=document.getElementById("main")
+let choose = document.querySelector("select option[name='optionpick']:checked");
+let list=document.getElementById("yes")
+let copy=""
+
+
+if (choose.value === "uppercase") {
+        name.value = name.value.toUpperCase();
+    } else {
+
+        name.value = name.value.toLowerCase();
+    }
+
+
+}
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
