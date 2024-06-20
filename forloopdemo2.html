@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- I understand your perspective. However, JavaScript and Python handle strings and lists differently. While you can directly append to lists in Python, JavaScript requires handling strings and arrays with their respective methods.
+
+In JavaScript, when dealing with HTML input elements, you need to convert the input value to a number and handle arrays separately from the input's value property. Here's how you can correctly handle factors in JavaScript: -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter number</label>
+    <input type="text" id="num" value="">
+    <br>
+    <label>Factors</label>
+    <input type="text" id="fac" value="">
+    <br>
+    <label>Total Factors</label>
+    <input type="text" id="totalfac" value="">
+    <br>
+    <label>Is Prime?</label>
+    <input type="text" id="Prime" value="">
+    <input type="button" value="calculatefactors" onclick="countfactors()">
+    <input type="button" value="isitprime" onclick="isprime()">
+
+<script>
+function countfactors()
+{
+    let number=document.getElementById("num")
+    let factorlist=document.getElementById("fac")
+    let totalfactors=document.getElementById("totalfac")
+    factorlist.value=""
+    totalfactors.value=0;
+    let count=0;
+    for(let i=0;i<=number.value;i++)
+    {
+   if(number.value%i==0)
+     {
+  factorlist.value+=""+i+",";
+    count+=1;
+     }
+
+    }
+    totalfactors.value=count
+
+}
+function isprime()
+{
+    let number=document.getElementById("num")
+    let prime=document.getElementById("Prime")
+    let totalfactors=document.getElementById("totalfac")
+    if(totalfactors.value>2)
+    {
+       prime.value="not prime"
+    }
+    else
+    {
+        prime.value=" prime"
+
+
+    }
+}
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
