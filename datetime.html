@@ -1,25 +1,62 @@
-<!DOCTYPE html>
+<html lang="en">
 <head>
-<html>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
-
 <body>
-    <h1> This is good </h1>
-    <p>This is not a good situation</p>
-</body>
-<p id="learningtime2"></p>
+    
+<p id="demo">this</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p id="demo">this</p>
+<input type="button" value="yes" onclick="kart()">
 
 <script>
-const time=new Date(10000000000)
-time.toLocaleDateString()
+function kart() {
+    let day;
+    let p = document.getElementById("demo");
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day="Tuesday"
+            break;
+    
+        }
+    p.innerHTML = day;
+}
+</script>
 
-document.getElementById("learningtime2").innerHTML=time
+</body>
+</html>
+
+
+
+
+
+}
+
+
+
+
 
 </script>
 
 
 
+
+
+</body>
 </html>
