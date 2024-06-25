@@ -18,7 +18,6 @@
     
 <p id="demo">this</p>
 <input type="button" value="yes" onclick="kart()">
-
 <script>
 function kart() {
     let day;
@@ -33,7 +32,11 @@ function kart() {
         case 2:
             day="Tuesday"
             break;
+        default:
+            day="Not valid"
+            break;    
     
+
         }
     p.innerHTML = day;
 }

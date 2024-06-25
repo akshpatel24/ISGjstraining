@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Select</label>
+    <br>
+    <label>Dettol</label>
+    <input type="checkbox" value="Dettol" id="det">
+    <br>
+    <label>Cinthol</label>
+    <input type="checkbox" value="z" id="cith">
+    <br>
+    <label>Haman</label>
+    <input type="checkbox" value="Haman" id="Ham">
+    <br>
+    <label> Dove </label>
+    <input type="checkbox" value="Dov" id="Dov">
+     <br>
+    <input type="button" value="set soap" id="Soaping" onclick="soap()">
+    <input type="text" value="" id="fillin">
+    <script>
+     function soap() {
+    let select = document.querySelectorAll('input[type="checkbox"]:checked');
+    let f = document.getElementById("fillin");
+    let emptystring = '';
+
+    for (let i = 0; i < select.length; i++) {
+        emptystring += select[i].value+","
+    }
+
+    f.value = emptystring;
+}
+
+    </script>
+
+</body>
+</html>
