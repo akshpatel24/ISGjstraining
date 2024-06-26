@@ -5,7 +5,6 @@
     <title>Document</title>
 </head>
 <body>
-    
 <label>   pets own   </label>
 <br>
 <label> dog   </label>
@@ -18,16 +17,27 @@
 <input type="radio" value="1" name="number" id="one">
 <br>
 <label> 2 </label>
-<input type="radio" value="1" name="number" id="two">
+<input type="radio" value="2" name="number" id="two">
+<br>
 <input type="button" value="set soap" id="Soaping" onclick="soap()">
 <input type="text" value="" id="fillin">
 <script>
 function soap()
 {
-    let dog=document.querySelectorAll(input)
-    
+    let checked=document.querySelectorAll('input[type="checkbox"]:checked')
+    // returns a node list JavaScript does not automatically process collections of nodes like SQL processes collections of rows
+    let amount  =document.querySelector('input[name="number"]:checked')
+    let text=document.getElementById('fillin')
+    let f=""
+    for(let i=0;i<checked.length;i++)
+        {
+            f+=checked[i].value+","
 
-}
+        }
+
+        text.value = f + (amount ? amount.value : "");
+
+    }
 
 
 </script>
