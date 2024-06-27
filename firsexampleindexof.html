@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Enter string</label>
+
+    <input type="text" value="nam1" id="t1">
+    <br>
+    <label>Enter substring</label>
+    <input type="text" value="sub1" id="t2">
+    <br>
+    <label>Selected count is</label>
+    <input type="text" value="" id="select">
+
+    <input type="button" id="click" value="findoccurancies" onclick="part2()">
+
+    <script>
+        function part2() {
+            let name1 = document.getElementById("t1").value;
+            let subname = document.getElementById("t2").value; 
+            // we
+            let select = document.getElementById("select")
+            let count = 0;
+            let pos = name1.indexOf(subname);
+            //0
+            while (pos != -1) {
+                count += 1 
+                //1 //2
+                pos = name1.indexOf(subname,pos+1); 
+                // "We" 1 means it tarts from 1/
+                // for second time will search same subname 'we for example it will be 10 index out'
+
+                //  will be -1.
+            }
+            select.value = count
+
+        
+
+        }
+
+    </script>
+
+</body>
+
+</html>
